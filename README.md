@@ -1,15 +1,19 @@
 # SkewIT
 SkewIT (Skew Index Test) is a tool for analyzing GC Skew in bacterial genomes. 
-The main script `skewi.py` is located in the `/src/` folder. Users can make this script executable by running
+Currently, this test suite contains two main python scripts (developed in python 2.7.5):
+1. `skewi.py`: calculates SkewI for each genome provided
+2. `gcskew.py`: calculates gc skew values across the whole genome for one single genome
+
+Both scripts are located in the `/src/` folder. While each script can be run using `python myscript.py`, users can make each script executable by running
  
     chmod +x skewi.py 
     ./skewi.py -h
-    ./skewi.py --usage
 
 **IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
-## SkewI.py Usage/Options
-This program will calculate SkewI values for each genome provided. Usage information can by provided by running `python skewi.py --usage`. Here, we describe how to run `skewi.py`, along with all related options and possibilities. 
+## skewI.py Usage/Options
+This program will calculate SkewI values for each genome provided. Running `python skewi.py --usage` will print a full usage message to the system standard out. 
+Here, we describe how to run `skewi.py`, along with all related options and possibilities. 
 
     python skewi.py -i SEQ.FASTA
 
@@ -69,7 +73,7 @@ This program was designed for analysis of bacterial chromosomes, not plasmids. W
 
 If users would like to analyze plasmid sequences in their input files, simply specify `--plasmid` during runtime. 
 
-## GCskew.py Usage/Options
+## gcskew.py Usage/Options
 
 
 # Author information
