@@ -50,7 +50,7 @@ def usage():
     sys.stderr.write(" ## \t    .....................[default: 500,000bp]\t\t\t\t\t##\n")
     sys.stderr.write(" ## \t --complete/--all........only analyze sequences with 'complete' in header\t##\n")
     sys.stderr.write(" ## \t    .....................[default: --complete]\t\t\t\t\t##\n")
-    sys.stderr.write(" ## \t --plasmid/--no-plasmid..include/exclude plasmimd sequences from analysis\t##\n")
+    sys.stderr.write(" ## \t --plasmid/--no-plasmid..include/exclude plasmid sequences from analysis\t##\n")
     sys.stderr.write(" ## \t    .....................[default: --no-plasmid]\t\t\t\t##\n")
     sys.stderr.write(" ## Output file: If no output file is provided, SkewI will be printed to standard out\t##\n")
     sys.stderr.write(" ## \t      Otherwise, a tab-delimited file will be generated:\t\t\t##\n")
