@@ -6,12 +6,16 @@ The main script `skewi.py` is located in the `/src/` folder. Users can make this
     ./skewi.py -h
     ./skewi.py --usage
 
+**IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
+
 ## Usage/Options
 
-    python skewi.py
+    python skewi.py -i SEQ.FASTA
+
+    Required options:
     *   -i SEQ.FASTA...............fasta/multi-fasta sequence file
    
-    Optional:
+    Optional options:
     *   -o SKEWI.TXT...............output file [if none is provided, the program will print to standard out]
     *   -k WINDOW_SIZE.............size of window to assign a gc skew value [default: 20kb] 
     *   -f FREQUENCY...............number of bases between the start of each window [default: k == f, adjacent/non-overlapping windows]
@@ -39,15 +43,15 @@ If users choose to change the window size (`-k`), but do not specify a window fr
 
 1. For overlapping sequences, specify a frequency < window length:
         
-    python skewi.py -i MYSEQ.FASTA -k 20000 -f 10000`
+    `python skewi.py -i MYSEQ.FASTA -k 20000 -f 10000`
 
 2. For no minimum sequence length, specify `--min-seq-len 0`
     
-    python skewi.py -i MYSEQ.FASTA --min-seq-len 0`
+    `python skewi.py -i MYSEQ.FASTA --min-seq-len 0`
 
 3. For a smaller window size (and therefore more resolution):
         
-    python skewi.py -i MYSEQ.FASTA -k 10000` 
+    `python skewi.py -i MYSEQ.FASTA -k 10000` 
     
 The window size `-k` must always be larger or equal to frequency `-f`. Both values must be greater than 0. 
     
@@ -57,7 +61,6 @@ As the program was designed to work with RefSeq output files, these two options 
 
 Specifying `--complete` will require that "complete" is in the sequence header, while specifying `--all` will allow any sequence to be analyzed. 
     
-**IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
 
 ## --plasmid/--no-plasmid options
@@ -67,4 +70,5 @@ If users would like to analyze plasmid sequences in their input files, simply sp
 
 # Author information
 Updated: 2020/02/25 
+
 Jennifer Lu, jennifer.lu717@gmail.com 
