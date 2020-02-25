@@ -8,16 +8,16 @@ The main script `skewi.py` is located in the `/src/` folder. Users can make this
 
 ## Usage/Options
 
-    `python skewi.py`
-    *   `-i SEQ.FASTA...............`fasta/multi-fasta sequence file
+    python skewi.py
+    *   -i SEQ.FASTA...............fasta/multi-fasta sequence file
    
     Optional:
-    *   `-o SKEWI.TXT...............`output file [if none is provided, the program will print to standard out]
-    *   `-k WINDOW_SIZE.............`size of window to assign a gc skew value [default: 20kb] 
-    *   `-f FREQUENCY...............`number of bases between the start of each window [default: k == f, adjacent/non-overlapping windows]
-    *   `--min-seq-len LENGTH.......`minimum sequence length required to analyze [default: 500kb]
-    *   `--complete/--all...........`only analyze complete sequences/analyze complete and draft sequences [default: --complete]
-    *   `--plasmid/--no-plasmid.....`include/exclude plasmid sequences [default: --no-plasmid]
+    *   -o SKEWI.TXT...............output file [if none is provided, the program will print to standard out]
+    *   -k WINDOW_SIZE.............size of window to assign a gc skew value [default: 20kb] 
+    *   -f FREQUENCY...............number of bases between the start of each window [default: k == f, adjacent/non-overlapping windows]
+    *   --min-seq-len LENGTH.......minimum sequence length required to analyze [default: 500kb]
+    *   --complete/--all...........only analyze complete sequences/analyze complete and draft sequences [default: --complete]
+    *   --plasmid/--no-plasmid.....include/exclude plasmid sequences [default: --no-plasmid]
 
 ## Input Files
 
@@ -37,14 +37,19 @@ By default, the program will calculate SkewI using non-overlapping/adjacent wind
 
 If users choose to change the window size (`-k`), but do not specify a window frequency, the program will by default use non-overlapping/adjacent windows (`k == f`) 
 
-    1. For overlapping sequences, specify a frequency < window length:
-        `python skewi.py -i MYSEQ.FASTA -k 20000 -f 10000`
-    2. For no minimum sequence length, specify `--min-seq-len 0`
-        `python skewi.py -i MYSEQ.FASTA --min-seq-len 0`
-    3. For a smaller window size (and therefore more resolution):
-        `python skewi.py -i MYSEQ.FASTA -k 10000` 
+1. For overlapping sequences, specify a frequency < window length:
+        
+    python skewi.py -i MYSEQ.FASTA -k 20000 -f 10000`
+
+2. For no minimum sequence length, specify `--min-seq-len 0`
     
-    The window size `-k` must always be larger or equal to frequency `-f`. Both values must be greater than 0. 
+    python skewi.py -i MYSEQ.FASTA --min-seq-len 0`
+
+3. For a smaller window size (and therefore more resolution):
+        
+    python skewi.py -i MYSEQ.FASTA -k 10000` 
+    
+The window size `-k` must always be larger or equal to frequency `-f`. Both values must be greater than 0. 
     
 
 ## --complete/--all options
