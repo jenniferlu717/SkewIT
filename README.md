@@ -9,6 +9,7 @@ The main script `skewi.py` is located in the `/src/` folder. Users can make this
 **IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
 ## SkewI.py Usage/Options
+This program will calculate SkewI values for each genome provided. Usage information can by provided by running `python skewi.py --usage`. Here, we describe how to run `skewi.py`, along with all related options and possibilities. 
 
     python skewi.py -i SEQ.FASTA
 
@@ -67,6 +68,9 @@ Specifying `--complete` will require that "complete" is in the sequence header, 
 This program was designed for analysis of bacterial chromosomes, not plasmids. We have not tested the performance of the program on plasmid sequences. Therefore, by default, the program will skip any sequence containing "plasmid" in the header. 
 
 If users would like to analyze plasmid sequences in their input files, simply specify `--plasmid` during runtime. 
+
+## GCskew.py Usage/Options
+
 
 # Author information
 Updated: 2020/02/25 
