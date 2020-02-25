@@ -8,7 +8,7 @@ The main script `skewi.py` is located in the `/src/` folder. Users can make this
 
 **IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
-## Usage/Options
+## SkewI.py Usage/Options
 
     python skewi.py -i SEQ.FASTA
 
@@ -23,11 +23,11 @@ The main script `skewi.py` is located in the `/src/` folder. Users can make this
     *   --complete/--all...........only analyze complete sequences/analyze complete and draft sequences [default: --complete]
     *   --plasmid/--no-plasmid.....include/exclude plasmid sequences [default: --no-plasmid]
 
-## Input Files
+### Input Files
 
 Currently, input sequence files must be FASTA formatted and not zipped. 
 
-## Output Format
+### Output Format
 
 If an output file is provided, the program will generate a tab-delimited, 2-column output file with headers. The first column will contain the full sequence ID/description. The second column will contain the calculated SkewI value. 
 
@@ -35,7 +35,7 @@ If no output file is provided, the program will print these two columns to the s
         `python skewi.py -i MYSEQ.FASTA > MYOUTPUT.TXT`
 
 
-## -k/-f/--min-seq-len
+### Window Length/Frequency Options (-k/-f/--min-seq-len)
     
 By default, the program will calculate SkewI using non-overlapping/adjacent windows of size 20kb only for sequences with a minimum length of 500kb. 
 
@@ -56,14 +56,14 @@ If users choose to change the window size (`-k`), but do not specify a window fr
 The window size `-k` must always be larger or equal to frequency `-f`. Both values must be greater than 0. 
     
 
-## --complete/--all options
+### Complete Genome Options (--complete/--all)
 As the program was designed to work with RefSeq output files, these two options are provided to allow users to specify whether complete or all genomes in the provided files should be analyzed.
 
 Specifying `--complete` will require that "complete" is in the sequence header, while specifying `--all` will allow any sequence to be analyzed. 
     
 
 
-## --plasmid/--no-plasmid options
+### Plasmid Options (--plasmid/--no-plasmid)
 This program was designed for analysis of bacterial chromosomes, not plasmids. We have not tested the performance of the program on plasmid sequences. Therefore, by default, the program will skip any sequence containing "plasmid" in the header. 
 
 If users would like to analyze plasmid sequences in their input files, simply specify `--plasmid` during runtime. 
