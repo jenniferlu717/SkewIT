@@ -4,7 +4,7 @@ SkewIT (Skew Index Test) is a tool for analyzing GC Skew in bacterial genomes. G
 **IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
 ## Code availability 
-Currently, this repository contains two main python scripts (developed in python 2.7.5):
+This repository contains two main python scripts (developed in python 2.7.5):
 1. `skewi.py`: calculates SkewI for each genome provided
 2. `gcskew.py`: calculates gc skew values across the whole genome for one single genome
 
@@ -16,7 +16,7 @@ Both scripts are located in the `/src/` folder. While each script can be run usi
 ## Data availability
 In addition to the available code, we also provide SkewI values and thresholds for RefSeq release 97 in the `/data/` folder.
 1. `RefSeq97_Bacteria_SkewI_incl.taxonomy.txt`: lists SkewI values for each complete bacterial genome along with their taxonomy 
-2. `RefSeq97_Bacteria_GenusSkewIThresholds.txt`: lists each bacterial genus with their SkewI mean/standard deviation and (for genera with >= 10 genomes) the SkewI threshold (2 standard deviations below mean). 
+2. `RefSeq97_Bacteria_GenusSkewIThresholds.txt`: lists each bacterial genus with the number of genomes, SkewI mean/standard deviation, and (for genera with >= 10 genomes) the SkewI threshold (2 standard deviations below mean). 
 
 ## skewI.py Usage/Options
 This program will calculate SkewI values for each genome provided. Running `python skewi.py --usage` will print a full usage message to the system standard out. 
@@ -29,7 +29,7 @@ Here, we describe how to run `skewi.py`, along with all related options and poss
    
     Optional options:
     *   -o SKEWI.TXT...............output file [if none is provided, the program will print to standard out]
-    *   -k WINDOW_SIZE.............size of window to assign a gc skew value [default: 20kb] 
+    *   -k WINDOW SIZE.............size of window to assign a gc skew value [default: 20kb] 
     *   -f FREQUENCY...............number of bases between the start of each window [default: k == f, adjacent/non-overlapping windows]
     *   --min-seq-len LENGTH.......minimum sequence length required to analyze [default: 500kb]
     *   --complete/--all...........only analyze complete sequences/analyze complete and draft sequences [default: --complete]

@@ -19,7 +19,7 @@
 #along with this program; if not, see <http://www.gnu.org/licenses/>.
 
 #####################################################################
-#Jennifer Lu, jlu26@jhmi.edu
+#Jennifer Lu, jennifer.lu717@gmail.com
 #02/17/2020
 #
 #This program calculates a Skew Index (SkewI) 
