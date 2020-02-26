@@ -90,7 +90,7 @@ Here, we describe how to run `gcskew.py`.
     *   -i SEQ.FASTA...............fasta/multi-fasta sequence file
    
     Optional parameters:
-    *   -o SKEWI.TXT...............output file [if none is provided, the program will print to gcskew.txt (overwrites if exists)] 
+    *   -o SKEW.TXT................output file [if none is provided, the program will print to gcskew.txt (overwrites if exists)] 
     *   -k WINDOW SIZE.............size of window within which to calculate gc skew [default: 20kb] 
     *   -f FREQUENCY...............number of bases between the start of each window [default: k == f, adjacent/non-overlapping windows]
 
