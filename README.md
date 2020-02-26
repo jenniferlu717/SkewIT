@@ -24,10 +24,10 @@ Here, we describe how to run `skewi.py`, along with all related options and poss
 
     python skewi.py -i SEQ.FASTA
 
-    Required options:
+    Required parameters:
     *   -i SEQ.FASTA...............fasta/multi-fasta sequence file
    
-    Optional options:
+    Optional parameters:
     *   -o SKEWI.TXT...............output file [if none is provided, the program will print to standard out]
     *   -k WINDOW SIZE.............size of window to assign a gc skew value [default: 20kb] 
     *   -f FREQUENCY...............number of bases between the start of each window [default: k == f, adjacent/non-overlapping windows]
@@ -37,7 +37,7 @@ Here, we describe how to run `skewi.py`, along with all related options and poss
 
 ### Input Files
 
-Currently, input sequence files must be FASTA formatted and not zipped. 
+Currently, input sequence files must be FASTA formatted and not zipped. Multi-fasta files are permitted. The program will calculate and print one SkewI value for each sequence provided. 
 
 ### Output Format
 
@@ -81,7 +81,31 @@ This program was designed for analysis of bacterial chromosomes, not plasmids. W
 If users would like to analyze plasmid sequences in their input files, simply specify `--plasmid` during runtime. 
 
 ## gcskew.py Usage/Options
+This program will calculate GC Skew values for each genome provided. Running `python gcskew.py --usage` will print a full usage message to the system standard out. 
+Here, we describe how to run `gcskew.py`. 
 
+    python gcskew.py -i SEQ.FASTA
+
+    Required parameters:
+    *   -i SEQ.FASTA...............fasta/multi-fasta sequence file
+   
+    Optional parameters:
+    *   -o SKEWI.TXT...............output file [if none is provided, the program will print to gcskew.txt (overwrites if exists)] 
+    *   -k WINDOW SIZE.............size of window within which to calculate gc skew [default: 20kb] 
+    *   -f FREQUENCY...............number of bases between the start of each window [default: k == f, adjacent/non-overlapping windows]
+
+### Input/Output Files
+
+Currently, input sequence files must be FASTA formatted and not zipped. Multi-fasta files are permitted. 
+
+The output file is a 3 column, tab-delimited file with the following columns: 
+    1. sequence ID = allows users to sort out which GC Skew values belong to which sequences
+    2. index = designates the start index of the window for which GC Skew is calculated
+    3. GC Skew value = calculated by summing guanine (G) and cytosine (C) bases and calculating (G-C)/(G+C)
+
+### Window Length/Frequency Options (-k/-f)
+
+These options are identical to those described above for the `skewi.py` script.   
 
 # Author information
 Updated: 2020/02/25 
