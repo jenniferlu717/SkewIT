@@ -104,7 +104,7 @@ The output file is a 3 column, tab-delimited file with the following columns:
     3. GC Skew value = calculated by summing guanine (G) and cytosine (C) bases and calculating (G-C)/(G+C)
 
 For a single genome, plotting GC Skew vs. index will generate the following type of plot: 
-![GC Skew Example](https://github.com/jennifer.lu717/SkewIT/example_gcskew.png)
+![GC Skew Example](https://raw.githubusercontent.com/jenniferlu717/SkewIT/data/example_gcskew.png)
 
 ### Window Length/Frequency Options (-k/-f)
 
