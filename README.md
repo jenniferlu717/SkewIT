@@ -16,7 +16,7 @@ Both scripts are located in the `/src/` folder. While each script can be run usi
     ./skewi.py -h
 
 **DEPENDENCIES:** SkewIT scripts require biopython to read FASTA sequences. 
-For more information about installing biopython, see the [biopython website] (https://biopython.org/wiki/Download)
+For more information about installing biopython, see the [biopython website](https://biopython.org/wiki/Download)
 
 ## Data availability
 In addition to the available code, we also provide SkewI values and thresholds for RefSeq release 97 in the `/data/` folder.
