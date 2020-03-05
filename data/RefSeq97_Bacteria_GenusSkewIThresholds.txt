@@ -18,7 +18,7 @@ g__Brucella	217	0.8296	0.0820	0.6656
 g__Xanthomonas	208	0.7480	0.0747	0.5985
 g__Helicobacter	201	0.6012	0.0923	0.4165
 g__Listeria	184	0.9317	0.0880	0.7557
-g__Mycoplasma	182	0.5485	0.1530	6.0000
+g__Mycoplasma	182	0.5485	0.1530	0.2425
 g__Streptomyces	181	0.3352	0.1447	0.046
 g__Chlamydia	152	0.9907	0.0178	0.955
 g__Neisseria	150	0.8348	0.0907	0.653
