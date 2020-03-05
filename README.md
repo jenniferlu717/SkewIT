@@ -1,6 +1,8 @@
 # SkewIT
 SkewIT (Skew Index Test) is a tool for analyzing GC Skew in bacterial genomes. GC Skew is a phenomenon observed in many bacterial genomes wherein the two strands of the chromosome contain different proportions of guanine/cytosine nucleotides. SkewIT quantifies GC Skew using a single metric that can then be compared/analyzed across thousands of bacterial genomes.
 
+More information about the method is detailed in the [SkewIT biorxiv preprint paper](https://www.biorxiv.org/content/10.1101/2020.02.27.968214v2) (published March 5, 2020). 
+
 **IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
 ## Code availability 
@@ -12,6 +14,9 @@ Both scripts are located in the `/src/` folder. While each script can be run usi
  
     chmod +x skewi.py 
     ./skewi.py -h
+
+**DEPENDENCIES:** SkewIT scripts require biopython to read FASTA sequences. 
+For more information about installing biopython, see the [biopython website] (https://biopython.org/wiki/Download)
 
 ## Data availability
 In addition to the available code, we also provide SkewI values and thresholds for RefSeq release 97 in the `/data/` folder.
