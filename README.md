@@ -6,11 +6,11 @@ More information about the method is detailed in the [SkewIT biorxiv preprint pa
 **IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
 ## Code availability 
-This repository contains two main python scripts (developed in python 2.7.5):
+This repository contains three main python scripts (developed in python 2.7.5):
 1. `skewi.py`: calculates SkewI for each genome provided
 2. `gcskew.py`: calculates gc skew values across the whole genome for one single genome
-
-Both scripts are located in the `/src/` folder. While each script can be run using `python myscript.py`, users can make each script executable by running
+3. `plot_gcskew.py`: plots gc skew for each genome provided in a single multi-FASTA file
+Scripts are located in the `/src/` folder. While each script can be run using `python myscript.py`, users can make each script executable by running
  
     chmod +x skewi.py 
     ./skewi.py -h
@@ -18,6 +18,7 @@ Both scripts are located in the `/src/` folder. While each script can be run usi
 **DEPENDENCIES:** SkewIT scripts require biopython to read FASTA sequences. 
 For more information about installing biopython, see the [biopython website](https://biopython.org/wiki/Download)
 
+`plot_gcskew.py` script requires matplotlib and numpy. Plots will be saved in png format.
 ## Data availability
 In addition to the available code, we also provide SkewI values and thresholds for RefSeq release 97 in the `/data/` folder.
 1. `RefSeq97_Bacteria_SkewI_incl.taxonomy.txt`: lists SkewI values for each complete bacterial genome along with their taxonomy 
@@ -114,6 +115,24 @@ For a single genome, plotting GC Skew vs. index will generate the following type
 ### Window Length/Frequency Options (-k/-f)
 
 These options are identical to those described above for the `skewi.py` script.   
+
+## plot\_gcskew.py Usage/Options
+This program will PLOT GC Skew values for each genome provided. Running `python plot_gcskew.py --usage` will print a full usage message to the system standard out. 
+Here, we describe how to run `plot_gcskew.py`. 
+
+    python plot_gcskew.py -i SEQ.FASTA
+
+    Required parameters:
+    *   -i SEQ.FASTA...............fasta/multi-fasta sequence file
+   
+    Optional parameters:
+    *   -o SKEW.PNG................output file [if none is provided, the program will produce curr.png (overwrites if exists)] 
+    *   -k WINDOW SIZE.............size of window within which to calculate gc skew [default: 20kb] 
+    *   -f FREQUENCY...............number of bases between the start of each window [default: k == f, adjacent/non-overlapping windows]
+
+If a multi-FASTA file is given, one .png image is produced containing GC skew plots for each FASTA sequence. Ideally, do not provide a multi-FASTA file with more than 5 sequences. 
+
+For details of other options, see sections for other SkewIT programs provided.
 
 # Author information
 Updated: 2020/02/25 
