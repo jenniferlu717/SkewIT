@@ -109,9 +109,6 @@ The output file is a 3 column, tab-delimited file with the following columns:
     2. index = designates the start index of the window for which GC Skew is calculated
     3. GC Skew value = calculated by summing guanine (G) and cytosine (C) bases and calculating (G-C)/(G+C)
 
-For a single genome, plotting GC Skew vs. index will generate the following type of plot: 
-![GC Skew Example](data/example_gcskew.png)
-
 ### Window Length/Frequency Options (-k/-f)
 
 These options are identical to those described above for the `skewi.py` script.   
@@ -133,6 +130,9 @@ Here, we describe how to run `plot_gcskew.py`.
 If a multi-FASTA file is given, one .png image is produced containing GC skew plots for each FASTA sequence. Ideally, do not provide a multi-FASTA file with more than 5 sequences. 
 
 For details of other options, see sections for other SkewIT programs provided.
+
+For a single genome, plotting GC Skew vs. index will generate the following type of plot: 
+![GC Skew Example](data/example_gcskewplot.png)
 
 # Author information
 Updated: 2020/02/25 
