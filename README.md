@@ -127,9 +127,10 @@ Here, we describe how to run `plot_gcskew.py`.
     *   -k WINDOW SIZE.............size of window within which to calculate gc skew [default: 20kb] 
     *   -f FREQUENCY...............number of bases between the start of each window [default: k == f, adjacent/non-overlapping windows]
 
-If a multi-FASTA file is given, one .png image is produced containing GC skew plots for each FASTA sequence. Ideally, do not provide a multi-FASTA file with more than 5 sequences. 
+Options for this script are identical to those of other SkewIT programs provided.
 
-For details of other options, see sections for other SkewIT programs provided.
+## plot\_gcskew.py Example Output
+If a multi-FASTA file is given, one .png image is produced containing GC skew plots for each FASTA sequence. Ideally, do not provide a multi-FASTA file with more than 5 sequences. 
 
 For a 2-genome multi-FASTA file, `plot_gcskew.py` will generate the following: 
 ![GC Skew Example](data/example_gcskewplot.png)
