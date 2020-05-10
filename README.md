@@ -5,6 +5,13 @@ More information about the method is detailed in the [SkewIT biorxiv preprint pa
 
 **IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
+# README Sections 
+1. [Code Availability](#code-availability)
+2. [Data Availability](#data-availability)
+3. [skewi.py](#skewipy)
+4. [gcskew.py](#gcskewpy)
+5. [plot\_gcskew.py](#plotgcskewpy)
+
 ## Code availability 
 This repository contains three main python scripts (developed in python 2.7.5):
 1. [skewi.py](#skewipy): calculates SkewI for each genome provided
