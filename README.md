@@ -10,6 +10,7 @@ This repository contains three main python scripts (developed in python 2.7.5):
 1. `skewi.py`: calculates SkewI for each genome provided
 2. `gcskew.py`: calculates gc skew values across the whole genome for one single genome
 3. `plot_gcskew.py`: plots gc skew for each genome provided in a single multi-FASTA file
+
 Scripts are located in the `/src/` folder. While each script can be run using `python myscript.py`, users can make each script executable by running
  
     chmod +x skewi.py 
