@@ -5,12 +5,14 @@ More information about the method is detailed in the [SkewIT biorxiv preprint pa
 
 **IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
-# README Sections 
+--------------------------------------
+## README Sections 
 1. [Code Availability](#code-availability)
 2. [Data Availability](#data-availability)
 3. [skewi.py](#skewipy)
 4. [gcskew.py](#gcskewpy)
 5. [plot\_gcskew.py](#plotgcskewpy)
+---------------------------------------
 
 ## Code availability 
 This repository contains three main python scripts (developed in python 2.7.5):
@@ -33,6 +35,7 @@ In addition to the available code, we also provide SkewI values and thresholds f
 1. `RefSeq97_Bacteria_SkewI_incl.taxonomy.txt`: lists SkewI values for each complete bacterial genome along with their taxonomy 
 2. `RefSeq97_Bacteria_GenusSkewIThresholds.txt`: lists each bacterial genus with the number of genomes, SkewI mean/standard deviation, and (for genera with >= 10 genomes) the SkewI threshold (2 standard deviations below mean). 
 
+---------------------------------------
 ## skewi.py
 ### 1. skewi.py Usage/Options
 This program will calculate SkewI values for each genome provided. Running `python skewi.py --usage` will print a full usage message to the system standard out. 
@@ -95,6 +98,7 @@ This program was designed for analysis of bacterial chromosomes, not plasmids. W
 
 If users would like to analyze plasmid sequences in their input files, simply specify `--plasmid` during runtime. 
 
+---------------------------------------
 ## gcskew.py
 ### 1. gcskew.py Usage/Options
 This program will calculate GC Skew values for each genome provided. Running `python gcskew.py --usage` will print a full usage message to the system standard out. 
@@ -123,6 +127,7 @@ The output file is a 3 column, tab-delimited file with the following columns:
 
 These options are identical to those described above for the `skewi.py` script.   
 
+---------------------------------------
 ## plot\_gcskew.py
 ### 1. plot\_gcskew.py Usage/Options
 This program will PLOT GC Skew values for each genome provided. Running `python plot_gcskew.py --usage` will print a full usage message to the system standard out. 
