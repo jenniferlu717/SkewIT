@@ -131,7 +131,7 @@ If a multi-FASTA file is given, one .png image is produced containing GC skew pl
 
 For details of other options, see sections for other SkewIT programs provided.
 
-For a single genome, plotting GC Skew vs. index will generate the following type of plot: 
+For a 2-genome multi-FASTA file, `plot_gcskew.py` will generate the following: 
 ![GC Skew Example](data/example_gcskewplot.png)
 
 # Author information
