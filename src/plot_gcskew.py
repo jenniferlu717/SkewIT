@@ -1,8 +1,33 @@
-#!/bin/python
+#! /usr/bin/env python 
+##########################################################################
+#plot_gcskew.py plots gcskew values for a given chromosome
+#Copyright (C) 2020 Jennifer Lu, jlu26@jhmi.edu
+#
+#This file is part of SkewIT 
+#
+#SkewIT is free software; you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation; either version 3 of the license, or
+#(at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, see <http://www.gnu.org/licenses/>.
+##############################################################################
 #Jennifer Lu, jlu26@jhmi.edu
 #2019/01/15
 #
-#This program calculates and plots gc_skew for a genome provided to this program
+#This program plots gc_skew for a genome provided to this program
+#By default, the program will calculate gc-skew for 20kb windows every 20kb 
+#(adjacent/non-overlapping windows of 20kb)
+#
+#Users can specify window size and frequency of the calculation. If a specified
+#frequency is less than the window size, windows will be overlapping 
+######################################################################
 import sys, os, argparse 
 from time import gmtime
 from time import strftime
