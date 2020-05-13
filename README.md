@@ -9,9 +9,10 @@ More information about the method is detailed in the [SkewIT biorxiv preprint pa
 ## README Sections 
 1. [Code Availability](#code-availability)
 2. [Data Availability](#data-availability)
-3. [skewi.py](#skewipy)
-4. [gcskew.py](#gcskewpy)
-5. [plot\_gcskew.py](#plotgcskewpy)
+3. [SkewIT R Shiny App](#skewit-shiny-app)
+4. [skewi.py](#skewipy)
+5. [gcskew.py](#gcskewpy)
+6. [plot\_gcskew.py](#plotgcskewpy)
 ---------------------------------------
 
 ## Code availability 
@@ -34,6 +35,13 @@ For more information about installing biopython, see the [biopython website](htt
 In addition to the available code, we also provide SkewI values and thresholds for RefSeq release 97 in the `/data/` folder.
 1. `RefSeq97_Bacteria_SkewI_incl.taxonomy.txt`: lists SkewI values for each complete bacterial genome along with their taxonomy 
 2. `RefSeq97_Bacteria_GenusSkewIThresholds.txt`: lists each bacterial genus with the number of genomes, SkewI mean/standard deviation, and (for genera with >= 10 genomes) the SkewI threshold (2 standard deviations below mean). 
+
+## SkewIT Shiny App
+For ease of analysis, we have developed and provide a ShinyApp to visualize the SkewI distributions for the 15,067 bacterial genomes in RefSeq release 97: https://jenniferlu717.shinyapps.io/SkewIT/. This app provides users with the ability to
+1. Visualize the SkewI distribution across all genomes
+2. Visualize the SkewI distribution for any selected genus
+3. Visualize the SkewI values as separated by species
+4. Identify which genomes have SkewI values falling below the calculated SkewI threshold.
 
 ---------------------------------------
 ## skewi.py
