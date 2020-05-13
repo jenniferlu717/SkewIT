@@ -42,6 +42,7 @@ For ease of analysis, we have developed and provide a ShinyApp to visualize the 
 2. Visualize the SkewI distribution for any selected genus
 3. Visualize the SkewI values as separated by species
 4. Identify which genomes have SkewI values falling below the calculated SkewI threshold.
+5. Plot GC skew values as produced by the [gcskew.py](#gcskewpy) program provided here.
 
 ---------------------------------------
 ## skewi.py
@@ -130,6 +131,8 @@ The output file is a 3 column, tab-delimited file with the following columns:
     1. sequence ID = allows users to sort out which GC Skew values belong to which sequences
     2. index = designates the start index of the window for which GC Skew is calculated
     3. GC Skew value = calculated by summing guanine (G) and cytosine (C) bases and calculating (G-C)/(G+C)
+
+This output file can be loaded into the [SkewIT R Shiny App](#skewit-shiny-app) (https://jenniferlu717.shinyapps.io/SkewIT/.) for visualization. 
 
 ### 3. gcskew.py Window Length/Frequency Options (-k/-f)
 
