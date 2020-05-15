@@ -42,7 +42,9 @@ For ease of analysis, we have developed and provide a ShinyApp to visualize the 
 2. Visualize the SkewI distribution for any selected genus
 3. Visualize the SkewI values as separated by species
 4. Identify which genomes have SkewI values falling below the calculated SkewI threshold.
-5. Plot GC skew values as produced by the [gcskew.py](#gcskewpy) program provided here.
+5. Plot GC skew values and calculate SkewI from a user-provided FASTA file. 
+6. Plot GC skew values as produced by the [gcskew.py](#gcskewpy) program provided here.
+
 
 ---------------------------------------
 ## skewi.py
