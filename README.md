@@ -1,7 +1,7 @@
 # SkewIT
 SkewIT (Skew Index Test) is a tool for analyzing GC Skew in bacterial genomes. GC Skew is a phenomenon observed in many bacterial genomes wherein the two strands of the chromosome contain different proportions of guanine/cytosine nucleotides. SkewIT quantifies GC Skew using a single metric that can then be compared/analyzed across thousands of bacterial genomes.
 
-More information about the method is detailed in the [SkewIT biorxiv preprint paper](https://www.biorxiv.org/content/10.1101/2020.02.27.968214v2) (published March 5, 2020). 
+More information about the method is detailed in the [SkewIT paper](https://doi.org/10.1371/journal.pcbi.1008439) (published Dec 4, 2020). 
 
 **IMPORTANT:** GC Skew/SkewIT is intended for use with only complete, fully contiguous, bacterial sequences with no gaps. Sequences should be fully assembled from end-to-end for the calculated SkewI to be informative. Contigs/Scaffolds are not expected to display GC Skew. 
 
