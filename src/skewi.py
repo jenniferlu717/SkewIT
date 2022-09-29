@@ -165,22 +165,28 @@ def main():
                 skew.append(-1)
             else:
                 skew.append(0)
-        #Final print 
-        curr_size = len(skew)/2 
-        sys.stdout.flush()
-        skew += skew[:curr_size]
+        #Append FULL length to end 
+        full_len = len(skew)
+        half_len = round(len(skew)/2) 
+        skew += skew[:full_len]
         #Calculate abs(T2-T1) where T is sum of values
-        curr_diffs = []
-        x = sum(skew[0:curr_size])
-        y = sum(skew[curr_size:2*curr_size])
-        for i in range(0, curr_size-1):
-            curr_diffs.append(abs(x-y))
-            x = x - skew[i] + skew[i+curr_size]
-            y = y - skew[i+curr_size] + skew[i+2*curr_size]
-        curr_diffs.append(abs(x-y))
-        if len(curr_diffs) > 0:
-            max_cd = float(max(curr_diffs))
-            seq2skewi[my_description] = max_cd/float(len(my_seq))*float(args.window_size)
+        max_diff = -1
+        curr_range = round(full_len*(0.04))
+        for i in range(0, full_len):
+            for t in range(i+half_len-curr_range,i+half_len+curr_range):
+                x = sum(skew[i:t])
+                y = sum(skew[t:i+full_len])
+                #check if difference is bigger
+                if abs(x-y) > max_diff:
+                    max_diff = abs(x-y)
+        #set skewi value 
+        if max_diff > 0:
+            max_cd = float(max_diff)
+            skewi = max_cd/float(len(my_seq))*float(args.window_size)
+            if skewi > 1:
+                skewi = 1.0
+            seq2skewi[my_description] = skewi
+        #print update 
         sys.stderr.write("\r\t%i sequences evaluated" % (count_seqs))
         sys.stderr.flush()
 
